@@ -1,9 +1,6 @@
-medical_cause = input("does the student have any medical issues?(Y or N)").upper()
-atten =int(input("what is the percentage of attendence ofthe student"))
-if medical_cause=="Y":
-  print("he can take the exam")
-else:
-   if atten>75:
-      print("he can write the exam")
-   else:
-      print("Sorry you are not eligible for the exam")
+n = int(input("enter the number which you want to find the sum of"))
+sum=0
+for i in range(1,n+1):
+ sum = sum+i
+ print("\nsum =",sum)
+

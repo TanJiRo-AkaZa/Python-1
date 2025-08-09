@@ -1,11 +1,10 @@
-num=int(input("enter a number"))
-sum=0
-temp=num
-while temp>0:
-    digit=temp%10
-    sum += digit**3
-    temp//=10
-if num==sum:
-    print("it is a armstrong number")
-else:
-    print("it is not a armstrong number")
+lower = int(input("please enter the lower range"))
+upper = int(input("please enter the upper range"))
+print("prime numbers between",lower,"and",upper,":")
+for num in range(lower,upper+1):
+    if num >1:
+        for i in range(2,num):
+            if num % i == 0:
+                break
+        else:
+            print(num)

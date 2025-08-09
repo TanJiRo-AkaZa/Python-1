@@ -1,7 +1,9 @@
-n = int(input("please enter the number"))
-sum=0
-i=1
-while i<= n:
-    sum=sum+i
-    i=i+1
-print("\nSum=",sum)
+string = input("please enter your own word")
+char=input("please enter your own character")
+i=0
+count=0
+while(i<len(string)):
+    if(string[i]==char):
+        count = count+1
+    i= i + 1
+print("the total no of times", char,"has occured=",count)

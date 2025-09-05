@@ -1,10 +1,14 @@
-def cube(number):
-    return number*number*number
-def by_three(number):
-    if number%3==0:
-        return cube(number)
-    else:
-        return False
-print(by_three(9))
-print(by_three(4))
-
+try:
+    num1,num2=eval(input("enter two numbers seperated by a comma"))
+    result=num1/num2
+    print("result is",result)
+except ZeroDivisionError:
+    print("division by zero is error!!!")
+except SyntaxError:
+    print("comma is missing enter numbers in comma just like this 1,2")
+except:
+    print("wrong input")
+else:
+    print("no exceptions")
+finally:
+    print("this will execute")

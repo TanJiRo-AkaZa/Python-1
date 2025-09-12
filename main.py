@@ -1,13 +1,6 @@
-import random
-playing = True
-number=str(random.randint(10,20))
-print("i will generate an number from 10, 20 which you will try to guess")
-print("the game ends when you get 1 hero")
-while playing:
-    guess=int(input("please enter your best guess"))
-    if number==guess:
-        print("you have guessed it right")
-        print("the number was", number)
-        break
-    else:
-        print("the number which you guessed was not right")
+from datetime import date, time , datetime
+today=date.today()
+now=datetime.now()
+print("todays date is :",today)
+print("\ncurrent date and time is",now)
+print("\nDate components",today.year ,today.month,today.year)

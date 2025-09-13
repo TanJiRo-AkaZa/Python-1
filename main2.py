@@ -1,12 +1,11 @@
-import random
-import time
-def getRandomDate(startDate,endDate):
-    print("printing random date between ",startDate,"and",endDate)
-    randomGenerator = random.random()
-    dateFormat='%m/%d/%Y'
-    startTime= time.mktime(time.strptime(startDate,dateFormat))
-    endTime=time.mktime(time.strptime(endDate,dateFormat))
-    randomTime=startTime+randomGenerator*(endTime-startTime)
-    randomDate=time.strftime(dateFormat,time.localtime(randomTime))
-    return randomDate
-print("random date=", getRandomDate("1/1/2016","12/12/2018"))
+def match_words(words):
+    ctr = 0
+    lst = []
+    for word in words:
+        if len(word) > 1 and word[0] == word[-1]:
+            ctr +=1
+            lst.append(word)
+    print("list of words with same first and last character:", lst)
+    return ctr
+count = match_words(['abc', 'xyz',"cfc" ,'aba', '1221'])
+print("the number of words with same first and last character:", count)

@@ -1,6 +1,9 @@
-from datetime import date, time , datetime
-today=date.today()
-now=datetime.now()
-print("todays date is :",today)
-print("\ncurrent date and time is",now)
-print("\nDate components",today.year ,today.month,today.year)
+empty_list=[]
+print()
+number_list=[1,2,3,4,5]
+print(number_list)
+triples=[1,2,3]*3
+print(triples)
+aList=[100,200,300,400,500]
+aList=aList[::-1]
+print(aList,"\n")

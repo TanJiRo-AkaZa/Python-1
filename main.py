@@ -1,9 +1,27 @@
-empty_list=[]
-print()
-number_list=[1,2,3,4,5]
-print(number_list)
-triples=[1,2,3]*3
-print(triples)
-aList=[100,200,300,400,500]
-aList=aList[::-1]
-print(aList,"\n")
+student_data={"id1":
+    {"name": ["sarah"],
+     "class": ["V"],
+     "subject_integration": ["english, math, science"]
+     },
+    "id2":
+    {"name": ["david"],
+     "class": ["V"],
+     "subject_integration": ["english, math, science"]
+     },
+    "id3":
+    {"name": ["Sara"],
+     "class": ["V"],
+     "subject_integration": ["english, math, science"]
+     },
+    "id4":
+    {"name": ["surya"],
+     "class": ["V"],
+     "subject_integration": ["english, math, science"]
+     },
+
+    }
+result={}
+for key,value in student_data.items():
+    if value not in result.values():
+        result[key]=value
+print(result)

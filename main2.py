@@ -1,11 +1,8 @@
-def match_words(words):
-    ctr = 0
-    lst = []
-    for word in words:
-        if len(word) > 1 and word[0] == word[-1]:
-            ctr +=1
-            lst.append(word)
-    print("list of words with same first and last character:", lst)
-    return ctr
-count = match_words(['abc', 'xyz',"cfc" ,'aba', '1221'])
-print("the number of words with same first and last character:", count)
+dict_test={"a":1,"b":2,"c":2,"d":2,"e":2}
+print("the original dictionary is:" + str(dict_test))
+K=2
+res=0
+for key in dict_test:
+    if dict_test[key]==K:
+        res=res+1
+print("the frequency of",K,"is:",res)

@@ -1,27 +1,12 @@
-student_data={"id1":
-    {"name": ["sarah"],
-     "class": ["V"],
-     "subject_integration": ["english, math, science"]
-     },
-    "id2":
-    {"name": ["david"],
-     "class": ["V"],
-     "subject_integration": ["english, math, science"]
-     },
-    "id3":
-    {"name": ["Sara"],
-     "class": ["V"],
-     "subject_integration": ["english, math, science"]
-     },
-    "id4":
-    {"name": ["surya"],
-     "class": ["V"],
-     "subject_integration": ["english, math, science"]
-     },
-
-    }
-result={}
-for key,value in student_data.items():
-    if value not in result.values():
-        result[key]=value
-print(result)
+class parrot:
+    species = "bird"  # class attribute
+    def __init__(self, name, age):
+        self.name =name
+        self.age = age
+blu= parrot("Blu", 10)
+woo= parrot("Woo", 15)
+print("blu ia  a {}".format(blu.species))
+print("woo is a {}".format(woo.species))
+print("{} is {} years old".format(blu.name, blu.age))
+print("{} is {} years old".format(woo.name, woo.age)) 
+        

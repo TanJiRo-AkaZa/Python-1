@@ -1,8 +1,13 @@
-dict_test={"a":1,"b":2,"c":2,"d":2,"e":2}
-print("the original dictionary is:" + str(dict_test))
-K=2
-res=0
-for key in dict_test:
-    if dict_test[key]==K:
-        res=res+1
-print("the frequency of",K,"is:",res)
+class employee:
+    def __init__(self):
+        print("employee created")
+    def __del__(self):
+        print("detructor called, employee deleted.")
+def Create__obj():
+    print("making object")
+    obj = employee()
+    print("function end")
+    return obj
+print("calling Create__obj function....")
+obj = Create__obj()
+print("program end")

@@ -1,12 +1,10 @@
-class parrot:
-    species = "bird"  # class attribute
-    def __init__(self, name, age):
-        self.name =name
-        self.age = age
-blu= parrot("Blu", 10)
-woo= parrot("Woo", 15)
-print("blu ia  a {}".format(blu.species))
-print("woo is a {}".format(woo.species))
-print("{} is {} years old".format(blu.name, blu.age))
-print("{} is {} years old".format(woo.name, woo.age)) 
-        
+class IOSstring:
+    def __init__(self):
+        self.str1 = ""
+    def get__string(self):
+        self.str1 = input("Enter a string: ")
+    def print__string(self):
+        print("The result is:", self.str1.upper())
+str1 = IOSstring()
+str1.get__string()
+str1.print__string()

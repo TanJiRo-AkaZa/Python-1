@@ -1,10 +1,9 @@
-class IOSstring:
-    def __init__(self):
-        self.str1 = ""
-    def get__string(self):
-        self.str1 = input("Enter a string: ")
-    def print__string(self):
-        print("The result is:", self.str1.upper())
-str1 = IOSstring()
-str1.get__string()
-str1.print__string()
+class veichle:
+    def __init__(self,name,maxspeed,mileage):
+       self.name=name
+       self.maxspeed=maxspeed
+       self.mileage=mileage
+class bus(veichle):
+     pass
+school_bus=bus("School Volvo",180,12)
+print("veichle name:",school_bus.name,"speed:",school_bus.maxspeed,"mileage:",school_bus.mileage    )

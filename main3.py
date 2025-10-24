@@ -1,11 +1,8 @@
-l=[4,5,1,2,9,7,10,8]
-print("the original list is:",l)
-count=0
-for i in l:
-    count+=i
-avg=count/len(l)
-print("sum=",count)
-print("average=",avg)
-l.sort()
-print("the smallest number is",l[0])
-print("the largest number is",l[-1])
+class point:
+    def __init__(self, x=0, y=0):
+        self.x =x
+        self.y =y
+    def __str__(self):
+        return "({0}, {1})".format(self.x, self.y)
+p = point(3,4)
+print(p)

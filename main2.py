@@ -1,16 +1,11 @@
-class person(object):
-    def __init__(self,name,idnumber):
-       self.name=name
-       self.idnumber=idnumber
-    def display(self):
-        print("name:",self.name)
-        print("ID number:",self.idnumber)   
-class employee(person):
-        def __init__(   self,name,idnumber,salary,post):
-            
-            self.salary=salary
-            self.post=post
-            person.__init__(self,name,idnumber)
-a=employee("rahul",886012,2000000,"manager")
-a.display()
-    
+class computer:
+    def __init__(self):
+        self.max_price = 900
+    def sell(self):
+        print("Selling Price: {}".format(self.max_price))
+    def setmaxprice(self, price):
+        self.max_price = price
+c = computer()
+c.sell()
+c.setmaxprice(2000)
+c.sell()

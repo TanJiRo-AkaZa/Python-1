@@ -1,8 +1,16 @@
-class point:
-    def __init__(self, x=0, y=0):
-        self.x =x
-        self.y =y
-    def __str__(self):
-        return "({0}, {1})".format(self.x, self.y)
-p = point(3,4)
-print(p)
+class BMW():
+    def maxspeed(self):
+        print("BMW maxspeed is 240km/h")
+    def type(self):
+        print("BMW is a luxury car")
+
+class FERRARI():
+    def maxspeed(self):
+        print("FERRARI maxspeed is 350km/h")
+    def type(self):
+        print("FERRARI is a sports car")
+obj_bmw = BMW()
+obj_ferrari = FERRARI()
+for i in (obj_bmw, obj_ferrari):
+      i.maxspeed()
+      i.type()

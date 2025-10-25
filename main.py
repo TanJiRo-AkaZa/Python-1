@@ -1,9 +1,13 @@
-class myclass:
-    __privatvar = 27
-    def __privatmet(self):
-        print("Iam inside class of myclass")
-    def hello(self):
-        print("private variable value is:",myclass.__privatvar)
-foo =myclass()
-foo.hello()
-foo.__privatmet()  # This will raise an AttributeError
+from abc import ABC, abstractmethod
+class ABsclass(ABC):
+    def print(self,x):
+        print("this the the value of x:",x)
+    @abstractmethod
+    def task(self):
+        print("we are in ABsclass task method" )
+class test_class(ABsclass):
+    def task(self):
+        print("we are in test_class task method" )
+obj=test_class()
+obj.task()
+obj.print(100)

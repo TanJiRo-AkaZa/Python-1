@@ -1,23 +1,29 @@
 import tkinter as tk
-from datetime import date
 root = tk.Tk()
-root.title("Getting started with widgets")
-root.geometry("400x300")
-lbl = tk.Label(root,text="Hey there!",fg = "blue",bg = "yellow",
-               height=1,width=300)
-name_lbl = tk.Label(root,text="Name:FULLNAME", bg ="blue" ,fg ="white")
-name_entry = tk.Entry(root)
-text_box = tk.Text(root,height=3)
+root.title("login")
+root.geometry("400x400")
+frame =tk.Frame(master =root, bg="blue", width=200, height=360)
+lb1 = tk.Label(master=frame, text="Username", bg="blue", fg="white")
+lb2 = tk.Label(master=frame, text="Email", bg="blue", fg="white")
+lb3 = tk.Label(master=frame, text="Password", bg="blue", fg="white")
+name_entry = tk.Entry(frame)
+email_entry = tk.Entry(frame)
+password_entry = tk.Entry(frame,show="*"    )
 def display():
-    name = name_entry.get()
-    message = f"Hello, {name}!\nToday is {date.today()}."
-    text_box.delete(1.0, tk.END)
-    text_box.insert(tk.END, message)
-btn = tk.Button(root,text="begin",command=display,height=1,bg ="black",
-                fg = "white")
-lbl.pack()
-name_lbl.pack()
-name_entry.pack()
-btn.pack()
-text_box.pack()
+   name = name_entry.get()
+   greet = "hey " + name
+   message = "\ncongratulations " + name + " you have successfully logged in"
+   textbox.insert(tk.END, greet + message)
+   textbox.insert(tk.END, "\nUsername: " + name)
+textbox = tk.Text(bg ="blue", fg ="white")
+btn = tk.Button(text="create account", command=display,bg="red")
+frame.place(x=20, y=0)
+lb1.place(x=20, y=20)
+name_entry.place(x=20, y=50)
+lb2.place(x=20, y=80)
+email_entry.place(x=150, y=80)
+lb3.place(x=20, y=140)
+password_entry.place(x=150, y=140)  
+btn.place(x=130,y=210)
+textbox.place(y=250)
 root.mainloop()

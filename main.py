@@ -1,29 +1,15 @@
 import tkinter as tk
-root = tk.Tk()
-root.title("login")
-root.geometry("400x400")
-frame =tk.Frame(master =root, bg="blue", width=200, height=360)
-lb1 = tk.Label(master=frame, text="Username", bg="blue", fg="white")
-lb2 = tk.Label(master=frame, text="Email", bg="blue", fg="white")
-lb3 = tk.Label(master=frame, text="Password", bg="blue", fg="white")
-name_entry = tk.Entry(frame)
-email_entry = tk.Entry(frame)
-password_entry = tk.Entry(frame,show="*"    )
-def display():
-   name = name_entry.get()
-   greet = "hey " + name
-   message = "\ncongratulations " + name + " you have successfully logged in"
-   textbox.insert(tk.END, greet + message)
-   textbox.insert(tk.END, "\nUsername: " + name)
-textbox = tk.Text(bg ="blue", fg ="white")
-btn = tk.Button(text="create account", command=display,bg="red")
-frame.place(x=20, y=0)
-lb1.place(x=20, y=20)
-name_entry.place(x=20, y=50)
-lb2.place(x=20, y=80)
-email_entry.place(x=150, y=80)
-lb3.place(x=20, y=140)
-password_entry.place(x=150, y=140)  
-btn.place(x=130,y=210)
-textbox.place(y=250)
-root.mainloop()
+window = tk.Tk()
+window.title("")
+window.geometry("400x300")
+def handle_keypress(event):
+    """print the character of the key pressed"""
+    print(event.char)
+window.bind("<KeyPress>", handle_keypress)
+def handle_click(event):
+    """print the coordinates of the mouse click"""
+    print("\nThe button was clicked")
+button = tk.Button(window, text="Click Me")
+button.pack()
+button.bind("<Button-1>", handle_click)
+window.mainloop()
